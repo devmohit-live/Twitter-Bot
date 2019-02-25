@@ -37,7 +37,7 @@ def reply_to_tweets():
         last_seen_id = mention.id
         store_last_seen_id(last_seen_id, FILE_NAME)
         if '#knit' in mention.full_text.lower() or '#anubhuti19' in mention.full_text.lower():
-            print('found #helloworld!', flush=True)
+            print('hey! found your hastag', flush=True)
             print('responding back...', flush=True)
             api.update_status('@' + mention.user.screen_name +
                     '#Hey Knitian regard from Mr. Anonymous', mention.id)
